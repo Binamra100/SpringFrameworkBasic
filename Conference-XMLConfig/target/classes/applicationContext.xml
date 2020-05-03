@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="speakerRepository" class="com.binamra100.repository.HibernateSpeakerRepositoryImpl"/>
+
+    <!-- Autowire Constructor -->
+    <!-- <bean name="speakerService" class="com.binamra100.service.SpeakerServiceImpl" autowire="constructor">-->
+    <!-- Autowire ByName -->
+    <!-- <bean name="speakerService" class="com.binamra100.service.SpeakerServiceImpl" autowire="byName">-->
+    <!-- Autowire byType -->
+    <bean name="speakerService" class="com.binamra100.service.SpeakerServiceImpl" autowire="constructor">
+        <!-- Setter Injection Example -->
+        <!-- <property name="speakerRepository" ref="speakerRepository" /> -->
+
+        <!-- Constructor Injection Example -->
+        <!-- <constructor-arg index="0" ref="speakerRepository" /> -->
+
+    </bean>
+
+</beans>
